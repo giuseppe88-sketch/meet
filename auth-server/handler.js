@@ -21,7 +21,8 @@ const credentials = {
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
   redirect_uris: ["https://giuseppe88-sketch.github.io/meet"],
   javascript_origins: ["https://giuseppe88-sketch.github.io", "http://localhost:3000"],
-};
+}; 
+console.log(process.env.CLIENT_ID)
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
 const oAuth2Client = new OAuth2(
   client_id,
