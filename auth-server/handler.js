@@ -19,7 +19,7 @@ const credentials = {
   auth_uri: "https://accounts.google.com/o/oauth2/auth",
   token_uri: "https://oauth2.googleapis.com/token",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-  redirect_uris: ["https://giusepp88-sketch.github.io/meet/"],
+  redirect_uris: ["https://giuseppe88-sketch.github.io/meet"],
   javascript_origins: ["https://giuseppe88-sketch.github.io", "http://localhost:3000"],
 };
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
@@ -44,6 +44,7 @@ module.exports.getAuthURL = async () => {
    *  scopes are the ones users will see when the consent screen is displayed to them.
    *
    */
+  
   const authUrl = oAuth2Client.generateAuthUrl({
     access_type: "offline",
     scope: SCOPES,
