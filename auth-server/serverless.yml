@@ -23,10 +23,10 @@ frameworkVersion: '2'
 
 provider:
   name: aws
-  runtime: nodejs15.x
+  runtime: nodejs12.x
   region: eu-central-1
   timeout: 60 # optional, in seconds, default is 6
-environment:
+  environment:
     CLIENT_ID: ${file(config.json):CLIENT_ID}
     CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
     PROJECT_ID: ${file(config.json):PROJECT_ID}
