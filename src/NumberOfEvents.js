@@ -25,13 +25,15 @@ handleInputChanged = (event) => {
   };
     render(){
         return(
-            <div className="number-event">
+            <div className="numberOfEvents">
+              <p>Number of Events:</p>
                 <input
                  type="number"
                  className="number-input-event"
                  placeholder="Enter number of Events"
                  value={this.state.numberOfEvents}
                  onChange = {this.handleInputChanged}
+                 
                  />
            </div>
         )

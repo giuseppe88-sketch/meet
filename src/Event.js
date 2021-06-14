@@ -4,18 +4,18 @@ import React, { Component } from "react";
 
 class Event extends Component{
     state = {
-        showDetails: false
+        showDetails: true
     };
   
     toggleEvent = ()=> {
         this.setState({
-            showDetails: this.state.showDetails ? false : true
+            showDetails: this.state.showDetails === true ? false : true
         })
     }
     renderDetails = ()=>{
         const { event } = this.props;
 
-        if(this.setState.showDetails){
+        if(this.setState.showDetails === false){
            return(
                 <div className="event-details">
           <h2>Details</h2>
@@ -36,10 +36,12 @@ class Event extends Component{
         const { event } = this.props
         return(
             <div className="event">  
-             <p className="description">{event.description}</p>
+            <h3 className="event-summary">{event.summary}</h3>
+            <p className='event-start-date'>
+          {event.start.dateTime}, {event.start.timeZone}
+            </p>
              <p className='event-location'>{event.location}</p> 
-            <h1 className="event-summary">{event.summary}</h1>
-            <button className="details-button" onClick={this.toggleEvent}></button>
+            <button className="details-btn" onClick={this.toggleEvent}>Show details</button>
             {this.renderDetails()}
            
             </div>

@@ -5,7 +5,7 @@ import NumberOfEvents from '../NumberOfEvents'
 describe('<NumberOfEvents /> component', () => {
     test('render text input', () => {
       const NumberOfEventsWrapper = shallow(<NumberOfEvents />);
-      expect(NumberOfEventsWrapper.find('.number-event')).toHaveLength(1);
+      expect(NumberOfEventsWrapper.find('.numberOfEvents')).toHaveLength(1);
     });
     test('renders text number input ', () => {
         const NumberOfEventsWrapper = shallow(<NumberOfEvents />);

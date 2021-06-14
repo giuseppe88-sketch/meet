@@ -13,10 +13,6 @@ describe('<Event /> component',()=>{
       EventWrapper = shallow(<Event event={event} />);
     });
 
-    test('render description event',()=>{
-        expect(EventWrapper.find('.description').text()).toBe(event.description);
-
-    });
     test('shallow event should render location data', () => {
         expect(EventWrapper.find('.event-location').text()).toBe(event.location);
       });
@@ -24,7 +20,7 @@ describe('<Event /> component',()=>{
         expect(EventWrapper.find('.event-summary').text()).toBe(event.summary);
     })
     test('render show details button',()=>{
-        expect(EventWrapper.find('.details-button')).toHaveLength(1)
+        expect(EventWrapper.find('.details-btn')).toHaveLength(1)
     })
     text('render collapsed details after click show-details',()=>{
         EventWrapper.find('.details-button').simulate('click');
@@ -32,7 +28,7 @@ describe('<Event /> component',()=>{
     })
     
     text('render collapsed details after click show-details',()=>{
-        EventWrapper.find('.details-button').simulate('click');
+        EventWrapper.find('.details-btn').simulate('click');
         expect(EventWrapper.state('showDetails')).toBeTruthy();
     })
     
