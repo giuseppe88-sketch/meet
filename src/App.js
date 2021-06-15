@@ -30,11 +30,10 @@ class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       const locationEvents =
-        location === 'all' && eventCount === 0 ? 
-        events
-          : 
-          location !== 'all' && eventCount === 0 ? 
-          events.filter((event) => event.location === location)
+        location === 'all' && eventCount === 0 
+        ? events
+          : location !== 'all' && eventCount === 0
+          ? events.filter((event) => event.location === location)
           : events.filter((event) => event.location === location).slice(0, eventCount);
       if (this.mounted) {
         this.setState({
