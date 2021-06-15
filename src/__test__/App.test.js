@@ -78,7 +78,6 @@ describe('<App /> integration', () => {
       }
     }
     await suggestionInput.simulate('change',eventObject);
-    const allEvents = await getEvents();
     const AppStateEvent = AppWrapper.state('events');
     const EventListWrapper = AppWrapper.find(EventList);
     const propEventList = EventListWrapper.props().events;
