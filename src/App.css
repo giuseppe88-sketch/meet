@@ -2,6 +2,8 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-color: #c6dddcd0;
+
 }
 
 .App * {
@@ -83,6 +85,11 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background-color: #c8d1d1e3;
+  transition-duration: 0.4s;
+}
+.event:hover{
+  background-color: rgba(168, 168, 168, 0.664);
 }
 
 .details-btn {
