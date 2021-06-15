@@ -9,7 +9,7 @@ class Event extends Component{
   
     toggleEvent = ()=> {
         this.setState({
-            showHideDetails: this.state.showDetails === true ? false : true
+            showHideDetails: this.state.showHideDetails === true ? false : true
         })
     }; /*
     renderDetails = ()=>{
