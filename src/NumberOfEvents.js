@@ -21,6 +21,7 @@ handleInputChanged = (event) => {
         numberOfEvents: value,
         errorText: '',
       });
+      this.props.updateEvents('', value);
     }
   };
     render(){
