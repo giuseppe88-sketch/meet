@@ -11,7 +11,7 @@ class Event extends Component{
         this.setState({
             showDetails: this.state.showDetails === true ? false : true
         })
-    }
+    };
     renderDetails = ()=>{
         const { event } = this.props;
 
@@ -26,9 +26,9 @@ class Event extends Component{
              See details on Google Calendar   
              </a>
         </div>
-        )
+        );
       }
-    }
+    };
      
     
  
