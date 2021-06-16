@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from 'prop-types';
 
 
 class Event extends Component{
@@ -11,26 +11,7 @@ class Event extends Component{
         this.setState({
             showHideDetails: this.state.showHideDetails === true ? false : true
         })
-    }; /*
-    renderDetails = ()=>{
-        const { event } = this.props;
-
-        if(this.setState.showHideDetails === false){
-           return(
-                <div className="event-details">
-          <h2>Details</h2>
-            <p>{event.description}</p>
-             <p className="details-status">{event.status}</p>
-             <a href={event.htmlLink}
-                className="link-event">
-             See details on Google Calendar   
-             </a>
-        </div>
-        );
-      }
-    };*/
-     
-    
+    }; 
  
     render(){
         const { event } = this.props
@@ -55,5 +36,13 @@ class Event extends Component{
             </div>
         )
     }
+}
+Event.propTypes={
+    event:PropTypes.shape({
+        summary:PropTypes.string.isRequired,
+        location:PropTypes.string.isRequired,
+        description:PropTypes.string.isRequired,
+    }).isRequired,
+    toggleEvent:PropTypes.func.isRequired
 }
 export default Event;
