@@ -43,6 +43,6 @@ Event.propTypes={
         location:PropTypes.string.isRequired,
         description:PropTypes.string.isRequired,
     }).isRequired,
-    toggleEvent:PropTypes.func.isRequired
+    
 }
 export default Event;

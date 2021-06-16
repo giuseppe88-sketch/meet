@@ -42,7 +42,6 @@ handleInputChanged = (event) => {
     }
 }
 NumberOfEvents.propTypes = {
-  numberOfEvents: PropTypes.number.isRequired,
   updateEvents: PropTypes.func.isRequired
 }
 

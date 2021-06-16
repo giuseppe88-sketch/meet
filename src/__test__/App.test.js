@@ -69,22 +69,6 @@ describe('<App /> integration', () => {
     expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(AppNumberEvents);
     AppWrapper.unmount();
   });
-  test('get list of all events when user type input number', async () => {
-    const AppWrapper = mount(<App />);
-    const suggestionInput = AppWrapper.find(NumberOfEvents).find('.number-input-event');
-    const eventObject = {
-      target:{
-        value: 2
-      }
-    }
-    await suggestionInput.simulate('change',eventObject);
-    const AppStateEvent = AppWrapper.state('events');
-    const EventListWrapper = AppWrapper.find(EventList);
-    const propEventList = EventListWrapper.props().events;
-    expect(AppStateEvent).toHaveLength(eventObject.target.value);
-    expect (propEventList.length).toEqual(eventObject.target.value);
-    expect(EventListWrapper.find('li')).toHaveLength(eventObject.target.value);
-    AppWrapper.unmount();
-  });
+  
 });
 
