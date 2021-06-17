@@ -1,3 +1,4 @@
+import React from 'react';
 import { loadFeature, defineFeature } from 'jest-cucumber';
 import { mount, shallow } from 'enzyme';
 import Event from '../Event';
