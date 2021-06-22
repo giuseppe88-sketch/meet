@@ -30,7 +30,6 @@ handleInputChanged = (event) => {
     render(){
         return(
             <div className="numberOfEvents">
-               <ErrorAlert text={this.state.ErrorText} />
               <p>Number of Events:</p>
                 <input
                  type="number"
@@ -40,6 +39,7 @@ handleInputChanged = (event) => {
                  onChange = {this.handleInputChanged}
                  
                  />
+               <ErrorAlert text={this.state.ErrorText} />
            </div>
         )
     }
