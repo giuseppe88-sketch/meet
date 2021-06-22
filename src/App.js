@@ -5,16 +5,30 @@ import NumberOfEvents from './NumberOfEvents';
 import './nprogress.css';
 import './App.css';
 import { getEvents, extractLocations} from './api';
+import { NotificationAlert } from './Alert';
 
 class App extends Component {
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 20
+    numberOfEvents: 20,
+    notificationText:''
     
   }
   componentDidMount() {
     this.mounted = true;
+
+    if (navigator.onLine === false) {
+      this.setState({
+        notificationText:
+          'App is offline, list may be not up to date',
+      });
+    } else {
+      this.setState({
+        notificationText: '',
+      });
+    }
+
     getEvents().then((events) => {
       if (this.mounted) {
         const finalEvent = events.slice(0, this.state.numberOfEvents)
@@ -49,6 +63,7 @@ class App extends Component {
     return (
       <div className="App">
            <h1>MeetApp</h1>
+           <NotificationAlert text={this.state.notificationText}/>
            <CitySearch locations={this.state.locations} updateEvents={this.updateEvents}/> 
            <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents}/>
            <EventList events={this.state.events} />
