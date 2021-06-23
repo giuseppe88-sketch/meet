@@ -4,7 +4,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import './nprogress.css';
 import './App.css';
-import { getEvents, extractLocations} from './api';
+import { getEvents, extractLocations } from './api';
 import { NotificationAlert } from './Alert';
 
 class App extends Component {
@@ -35,7 +35,8 @@ class App extends Component {
         this.setState({ events: finalEvent, locations: extractLocations(events) });
       }
     });
-  }
+  
+}
 
   componentWillUnmount(){
     this.mounted = false;
@@ -59,7 +60,7 @@ class App extends Component {
   };
   
   render() {
-    
+  
     return (
       <div className="App">
            <h1>MeetApp</h1>
