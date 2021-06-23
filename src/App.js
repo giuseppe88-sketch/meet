@@ -64,9 +64,9 @@ class App extends Component {
     return (
       <div className="App">
            <h1>MeetApp</h1>
-           <NotificationAlert text={this.state.notificationText}/>
            <CitySearch locations={this.state.locations} updateEvents={this.updateEvents}/> 
            <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents}/>
+           <NotificationAlert text={this.state.notificationText}/>
            <EventList events={this.state.events} />
       </div>
     );
