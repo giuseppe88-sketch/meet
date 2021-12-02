@@ -4,7 +4,7 @@
   padding: 2% 5%;
   background-color: #a13f3f;
   background-image: url("https://ik.imagekit.io/7lqiq1zm3ks/_Pngtree_business_technology_dark_blue_background_914448_QBysNSsVT.jpg?updatedAt=1637583408649");
-  color:rgb(228, 233, 247)
+  color:rgb(241, 238, 238)
 
 }
 
@@ -67,7 +67,8 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(235, 233, 233);
+  color: #0f0f0f;
   cursor: default;
 }
 
