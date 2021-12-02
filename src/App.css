@@ -2,7 +2,9 @@
 .App {
   text-align: center;
   padding: 2% 5%;
-  background-color: #ffffff;
+  background-color: #a13f3f;
+  background-image: url("https://ik.imagekit.io/7lqiq1zm3ks/_Pngtree_business_technology_dark_blue_background_914448_QBysNSsVT.jpg?updatedAt=1637583408649");
+  color:rgb(228, 233, 247)
 
 }
 
@@ -65,7 +67,7 @@ input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  background-color: rgb(44, 44, 44);
   cursor: default;
 }
 
@@ -86,6 +88,7 @@ input[type="number"] {
   border-radius: 4px;
   position: relative;
   background-color: #c8d1d1e3;
+  color: #0f0f0f;
   transition-duration: 0.4s;
 }
 .event:hover{
