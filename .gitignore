@@ -24,4 +24,4 @@ yarn-error.log*
 
 
 #variable
-/config.json
+/auth-server/config.json
