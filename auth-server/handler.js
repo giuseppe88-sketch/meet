@@ -5,7 +5,7 @@ const calendar = google.calendar("v3");
  * SCOPES allows you to set access levels; this is set to readonly for now because you don't have access rights to
  * update the calendar yourself. For more info, check out the SCOPES documentation at this link: https://developers.google.com/identity/protocols/oauth2/scopes
  */
-const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
+const SCOPES = ["https://www.googleapis.com/auth/calendar.events.readonly"];
 
 /**
  * Credentials are those values required to get access to your calendar. If you see “process.env” this means
