@@ -4,7 +4,7 @@ const calendar = google.calendar("v3");
 /**
 scopes --- check out the SCOPES documentation at this link: https://developers.google.com/identity/protocols/oauth2/scopes
  */
-const SCOPES = ["https://www.googleapis.com/auth/calendar.events.readonly"];
+const SCOPES = ["https://www.googleapis.com/auth/calendar.events.public.readonly"];
 
 
 const credentials = {
