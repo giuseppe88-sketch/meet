@@ -25,3 +25,4 @@ yarn-error.log*
 
 #variable
 /auth-server/config.json
+/auth-server/node_modules
